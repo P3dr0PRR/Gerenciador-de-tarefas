@@ -83,16 +83,29 @@ export function Tarefas({
 
       {filtros === "Todos" && (
         <>
-          <Pendentes
-            tarefasPendentes={tarefasPendentes}
-            concluirTarefa={concluirTarefa}
-            deletarTarefa={deletarTarefa}
-          />
+          {tarefasPendentes.length === 0 && tarefasConcluidas.length === 0 ? (
+            <div>
+              <p className="text-center text-gray-500 mt-4">
+                Nenhuma tarefa definida.
+              </p>
+              <p className="text-center text-gray-500 mt-2">
+                Adicione uma nova tarefa para começar.
+              </p>
+            </div>
+          ) : (
+            <>
+              <Pendentes
+                tarefasPendentes={tarefasPendentes}
+                concluirTarefa={concluirTarefa}
+                deletarTarefa={deletarTarefa}
+              />
 
-          <Concluidas
-            tarefasConcluidas={tarefasConcluidas}
-            deletarTarefaConcluida={deletarTarefaConcluida}
-          />
+              <Concluidas
+                tarefasConcluidas={tarefasConcluidas}
+                deletarTarefaConcluida={deletarTarefaConcluida}
+              />
+            </>
+          )}
         </>
       )}
     </div>
