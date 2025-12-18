@@ -2,7 +2,6 @@
 
 > Um gerenciador de tarefas moderno e minimalista, desenvolvido com React e Tailwind CSS
 
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://seu-link.vercel.app)
 [![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38bdf8.svg)](https://tailwindcss.com/)
 
@@ -32,45 +31,25 @@ Este é um projeto de **Gerenciador de tarefas profissional** desenvolvido para 
 
 ---
 
-## 📦 Como Executar
-
-### Pré-requisitos
-
-- Node.js 16+ instalado
-- npm ou yarn
-
-### Instalação
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/task-manager.git
-
-# Entre na pasta
-cd task-manager
-
-# Instale as dependências
-npm install
-
-# Execute o projeto
-npm run dev
-```
-
-Acesse `http://localhost:5173` no navegador.
-
----
-
 ## 🏗️ Estrutura do Projeto
 
 ```
 src/
-├── components/
-│   ├── TaskForm.jsx       # Formulário de adicionar tarefa
-│   ├── TaskList.jsx       # Lista de tarefas
-│   ├── TaskItem.jsx       # Item individual
-│   ├── TaskFilter.jsx     # Filtros
-│   └── TaskStats.jsx      # Estatísticas
-├── App.jsx                # Componente principal
-└── main.jsx               # Entry point
+├── Body/
+│   ├── add.jsx
+│   ├── body.jsx
+│   ├── tarefas.jsx
+│   ├── to-do.jsx
+│   └── Tarefas/
+│       ├── concluidas.jsx
+│       ├── pendentes.jsx
+│       └── todas.jsx
+├── Header/
+│   └── header.jsx
+├── Footer/
+│   └── Footer.jsx
+├── App.jsx
+└── main.jsx
 ```
 
 ---
@@ -84,12 +63,40 @@ src/
 - **Renderização Condicional**: Exibição dinâmica de elementos
 - **Listas e Keys**: Renderização eficiente com `.map()`
 - **Estilização com Tailwind**: Classes utility-first
+- **Local Storage**: Persistência de dados no navegador
+
+---
+
+## 📦 Como Executar
+
+### Pré-requisitos
+
+- Node.js 16+ instalado
+- npm ou yarn
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/P3dr0PRR/Gerenciador_de_tarefas.git
+
+# Entre na pasta
+cd Gerenciador_de_tarefas
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
+```
+
+Acesse `http://localhost:5173` no navegador.
 
 ---
 
 ## 🔮 Melhorias Futuras
 
-- [ ] Persistência de dados no Local Storage
+- [x] Persistência de dados no Local Storage
 - [ ] Editar tarefas existentes
 - [ ] Categorias/Tags para tarefas
 - [ ] Modo escuro
