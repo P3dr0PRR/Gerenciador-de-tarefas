@@ -36,13 +36,13 @@ export function Tarefas({
       <div className="grid w-full grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3">
         <button
           className={`px-10 py-2 rounded-md ${
-            filtros === "Todos"
+            filtros === "Pendentes"
               ? "bg-blue-600 text-white font-semibold"
               : "hover:bg-blue-100"
           }`}
-          onClick={() => setFiltros("Todos")}
+          onClick={() => setFiltros("Pendentes")}
         >
-          Todas ({tarefasPendentes.length + tarefasConcluidas.length})
+          Pendentes ({tarefasPendentes.length})
         </button>
         <button
           className={`px-10 py-2 rounded-md ${
@@ -56,23 +56,15 @@ export function Tarefas({
         </button>
         <button
           className={`px-10 py-2 rounded-md ${
-            filtros === "Pendentes"
+            filtros === "Todos"
               ? "bg-blue-600 text-white font-semibold"
               : "hover:bg-blue-100"
           }`}
-          onClick={() => setFiltros("Pendentes")}
+          onClick={() => setFiltros("Todos")}
         >
-          Pendentes ({tarefasPendentes.length})
+          Todas ({tarefasPendentes.length + tarefasConcluidas.length})
         </button>
       </div>
-
-      {filtros === "Todos" && (
-        <Todas
-          tarefasPendentes={tarefasPendentes}
-          concluirTarefa={concluirTarefa}
-          deletarTarefa={deletarTarefa}
-        />
-      )}
 
       {filtros === "Pendentes" && (
         <Pendentes
@@ -87,6 +79,21 @@ export function Tarefas({
           tarefasConcluidas={tarefasConcluidas}
           deletarTarefaConcluida={deletarTarefaConcluida}
         />
+      )}
+
+      {filtros === "Todos" && (
+        <>
+          <Pendentes
+            tarefasPendentes={tarefasPendentes}
+            concluirTarefa={concluirTarefa}
+            deletarTarefa={deletarTarefa}
+          />
+
+          <Concluidas
+            tarefasConcluidas={tarefasConcluidas}
+            deletarTarefaConcluida={deletarTarefaConcluida}
+          />
+        </>
       )}
     </div>
   );

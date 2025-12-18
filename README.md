@@ -72,9 +72,6 @@ src/
 
 ### Pré-requisitos
 
-- Node.js 16+ instalado
-- npm ou yarn
-
 ### Instalação
 
 ```bash
@@ -92,6 +89,37 @@ npm run dev
 ```
 
 Acesse `http://localhost:5173` no navegador.
+
+## 🧪 Build e Preview
+
+Crie os arquivos otimizados e visualize localmente a versão de produção:
+
+```bash
+# Gerar build de produção
+npm run build
+
+# Visualizar o build localmente
+npm run preview
+```
+
+---
+
+## ☁️ Deploy (Vercel)
+
+Passos rápidos para publicar e ter um link online permanente:
+
+```bash
+# Instalar a CLI (uma única vez)
+npm install -g vercel
+
+# Fazer o primeiro deploy (preview)
+vercel
+
+# Publicar em produção (link permanente)
+vercel --prod
+```
+
+Link em produção: **https://gerenciador-de-tarefas-five-khaki.vercel.app**
 
 ---
 

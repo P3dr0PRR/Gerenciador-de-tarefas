@@ -13,7 +13,7 @@ export function Concluidas({ tarefasConcluidas, deletarTarefaConcluida }) {
           </p>
         </div>
       ) : (
-        <div className="">
+        <div className="px-4">
           {tarefasConcluidas.map((tarefa, index) => (
             <div
               key={index}
