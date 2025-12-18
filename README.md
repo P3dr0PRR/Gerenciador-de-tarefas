@@ -2,6 +2,7 @@
 
 > Um gerenciador de tarefas moderno e minimalista, desenvolvido com React e Tailwind CSS
 
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://gerenciador-de-tarefas-five-khaki.vercel.app)
 [![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38bdf8.svg)](https://tailwindcss.com/)
 
