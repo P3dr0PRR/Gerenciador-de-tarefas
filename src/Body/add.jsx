@@ -12,12 +12,15 @@ export function Add({
     <div className="w-full flex justify-center items-center gap-4 p-4">
       <input
         type="text"
+        value={tarefas}
         placeholder="Adicionar nova tarefa"
         className="flex-grow border border-gray-300 rounded-md px-4 py-2 mr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
         onChange={(e) => setTarefas(e.target.value)}
       />
       <button
+        disabled={tarefas.trim() === ""}
         onClick={() => {
+          if (tarefas.trim() === "") return;
           setTarefasPendentes([...tarefasPendentes, tarefas]);
           setTarefas("");
         }}
