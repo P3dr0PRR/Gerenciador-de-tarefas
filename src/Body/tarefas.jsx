@@ -33,7 +33,7 @@ export function Tarefas({
 
   return (
     <div>
-      <div className="w-auto flex justify-between p-6 ">
+      <div className="grid w-full grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3">
         <button
           className={`px-10 py-2 rounded-md ${
             filtros === "Todos"
